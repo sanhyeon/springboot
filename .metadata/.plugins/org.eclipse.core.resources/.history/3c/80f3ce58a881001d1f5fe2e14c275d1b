@@ -1,0 +1,37 @@
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.dao.MemberDAO;
+import com.example.domain.BoardVO;
+
+public class MemberServiceImpl {
+
+	@Autowired
+	private MemberDAO boardDAO;
+	
+	@Override
+	
+
+	@Override
+	
+
+	@Override
+	public void saveBoard(BoardVO vo) {
+		boardDAO.saveBoard(vo);
+		System.out.println("[BoardService] 새 글 등록");
+
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {
+		boardDAO.deleteBoard(vo);
+		System.out.println("[BoardService] 글 삭제");
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+		boardDAO.updateBoard(vo);
+		System.out.println("[BoardService] 글 수정");
+	}
+}

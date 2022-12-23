@@ -1,0 +1,5 @@
+# settings
+
+# JSP
+
+spring.mvc.view.prefix=/WEB-INF/views/

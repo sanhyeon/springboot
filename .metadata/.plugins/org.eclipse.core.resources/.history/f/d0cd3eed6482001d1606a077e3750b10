@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dao.BoardDAO">
+
+	<select id="getBoardList" resultType="BoardVO">
+	
+		SELECT *
+		FROM BOARD2
+		ORDER BY SEQ DESC
+
+	</select>
+	
+	<select id="getBoard" resultType="BoardVO" parameterType="BoardVO">
+		SELECT *
+		FROM BOARD2
+		WHERE SEQ = #{seq}
+		ORDER BY SEQ DESC
+	</select>
+	
+	<insert id="saveBoard" parameterType="BoardVO">
+		INSERT INTO board2(cnt, content, regdate, seq, title, writer
+			<if test='#{fileId} != null'>
+				,fileId
+			</if>
+		)
+		VALUES (0, #{content}, SYSDATE, BOARD_SEQ.NEXTVAL, #{title}, #{writer}
+			<if test='#{fileId} != null'>
+				,#{fileId}
+			</if>
+		)
+	</insert>
+	
+	<delete id="deleteBoard" parameterType="BoardVO">
+		DELETE FROM board2
+		WHERE seq = #{seq}
+	</delete>
+	
+	<update id="updateBoard" parameterType="BoardVO">
+		UPDATE BOARD2 SET
+		TITLE = #{title},
+		CONTENT = #{content}
+		WHERE SEQ = #{seq}
+	</update>
+</mapper>

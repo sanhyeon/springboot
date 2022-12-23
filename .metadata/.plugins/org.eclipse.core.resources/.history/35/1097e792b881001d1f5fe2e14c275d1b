@@ -1,0 +1,21 @@
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.dao.MemberDAO;
+import com.example.domain.MemberVO;
+
+
+public class MemberServiceImpl {
+
+	@Autowired
+	private MemberDAO memberDAO;
+	
+	@Override
+	public void saveMember(MemberVO vo) {
+		meberDAO.saveMember(vo);
+		System.out.println("로그인 완료");
+
+	}
+	
+}

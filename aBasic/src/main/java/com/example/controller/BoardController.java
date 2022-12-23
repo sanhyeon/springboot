@@ -14,9 +14,18 @@ public class BoardController {
 	public void insertBoard() {
 		logger.info("[ insertBoard ]");
 	}
-	
+
 	@RequestMapping("/getBoardList")
 	public void getBoardList() {
 		logger.info("[ getBoardList ]");
+		
 	}
+	
+	@RequestMapping("/getBoard")
+	public void getBoard() {
+		logger.info("[ getBoard ]");
+		
+	}
+	
+	
 }

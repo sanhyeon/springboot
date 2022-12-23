@@ -1,0 +1,19 @@
+
+-----------------------------------------
+HTTP 메소드		의미					
+-----------------------------------------
+GET				READ(SELECT)
+POST				CREATE(INSERT)
+PUT				UPDATE
+DELETE			DELETE
+
+[ # ] 기존 URL과 비교
+-------------------------------------------------------------------------
+기능				기존 URL
+-------------------------------------------------------------------------
+게시판 목록보기	/board/getBoardList
+게시글 작성화면	/board/insertBoardForm
+게시글 작성			/board/saveBoard
+게시글 상세보기	/board/getBoard
+게시글 수정			/board/updateBoard
+게시글 삭제			/board/deleteBoard

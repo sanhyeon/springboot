@@ -1,0 +1,30 @@
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.dao.FIleDAO;
+
+@Service
+public class FileServieImpl implements FileService{
+	
+	@Autowired
+	private FIleDAO fileDAO;
+	
+	@Override
+	public void insertfile(FileVO vo) {
+		fileDAO.insertFile(vo);
+	}
+	
+	@Override
+	public long selectFile(FileVO vo) {
+		
+		return fileDAO.selectFile(vo);
+	}
+	
+	@Override
+	public long selectId() {
+		
+		return fileDAO.selectId();
+	}
+}

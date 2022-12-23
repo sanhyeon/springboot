@@ -1,0 +1,11 @@
+
+-----------------------------------------
+HTTP 메소드		의미					
+-----------------------------------------
+GET				READ(SELECT)
+POST				CREATE(INSERT)
+PUT				UPDATE
+DELETE			DELETE
+
+[ # ] 기존 URL과 비교
+

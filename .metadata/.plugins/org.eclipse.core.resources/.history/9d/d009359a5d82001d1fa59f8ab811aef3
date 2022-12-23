@@ -1,0 +1,25 @@
+package com.example.service;
+
+import com.example.domain.FileVO;
+
+public class FileServiceImpl implements FileService {
+
+	@Override
+	public void insertFile(FileVO vo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public long selectId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public FileVO selectFile(FileVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
